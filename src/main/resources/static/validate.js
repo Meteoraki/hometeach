@@ -52,7 +52,7 @@ function checkEmail(){
         alert("邮箱不能为空");
         userEmail.focus();
         return false;
-    }else if(/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/.test(userEmail){
+    }else if(/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/.test(userEmail)){
         alert("邮箱设置合理!");
         return true;
     }

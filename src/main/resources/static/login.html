@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>login</title>
     <style>
@@ -34,6 +35,8 @@
             .form-item input, .form-item button, .reg-bar { width: 100%; }
         }
     </style>
+
+
 </head>
 <body>
     <div class="dowebok">
@@ -52,7 +55,6 @@
             <a class="forget" href="javascript:">忘记密码</a>
         </div>
     </div>
-    <script src="images/jquery.min.js"></script>
     <script>
         $(function () {
             $('input').val('')
@@ -65,13 +67,21 @@
                     $.ajax({
                         url:"/login",
                         type:"post",
-                        data:{username:$("#username").val(),password:$("#password").val()},
+                        data:{userName:$("#username").val(),password:$("#password").val()},
                         dataType:"json",
                         success:function (res) {
 
                             if (res.code==0){
-                                window.location="/test.html";
+                                alert("登录成功")
+
                                 console.log("登录成功");
+
+                                if (res.data.flag == 1){
+                                    window.location="/html/index-student.html";
+
+                                }else if (res.data.flag == 2){
+
+                                }
                             }else{
                                 console.log("失败");
                             }

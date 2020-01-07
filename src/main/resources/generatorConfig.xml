@@ -18,7 +18,7 @@
         </commentGenerator>
 
         <!--配置数据库连接url，账户，密码-->
-        <jdbcConnection connectionURL="jdbc:mysql://120.79.30.62/mybatis_demo" driverClass="com.mysql.jdbc.Driver" password="1998314Ll." userId="root" />
+        <jdbcConnection connectionURL="jdbc:mysql://120.79.30.62/homeTeacher" driverClass="com.mysql.jdbc.Driver" password="1998314Ll." userId="root" />
 
         <!--配置生成的实体类位置-->
         <javaModelGenerator targetPackage="com.mybatis.demo.demo.model" targetProject="src/main/java" />
@@ -30,12 +30,48 @@
         <javaClientGenerator targetPackage="com.mybatis.demo.demo.dao" targetProject="src/main/java" type="XMLMAPPER" />
 
         <!--生成表配置，一个表一个table，加入已经生成，则会overwrite-->
-        <table tableName="tb_user" domainObjectName="User"
+        <table tableName="tb_admin" domainObjectName="Admin"
                enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
 
             <!--<property name="useActualColumnNames" value="false"/>-->
         </table>
+        <table tableName="tb_feedback" domainObjectName="Feedback"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+
+            <!--<property name="useActualColumnNames" value="false"/>-->
+        </table>
+        <table tableName="tb_orderitem" domainObjectName="OrderItem"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+
+            <!--<property name="useActualColumnNames" value="false"/>-->
+        </table>
+        <table tableName="tb_orderlist" domainObjectName="OrderList"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+
+            <!--<property name="useActualColumnNames" value="false"/>-->
+        </table>
+        <table tableName="tb_student" domainObjectName="Student"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+
+            <!--<property name="useActualColumnNames" value="false"/>-->
+        </table>
+        <table tableName="tb_teacher" domainObjectName="Teacher"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+
+            <!--<property name="useActualColumnNames" value="false"/>-->
+        </table>
+
     </context>
 </generatorConfiguration>
